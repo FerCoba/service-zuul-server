@@ -38,6 +38,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 						"/api/product/obtainInformationAllProducts", "/api/user/obtainInformationAllUsers")
 				.permitAll().antMatchers(HttpMethod.GET, "/api/user/userName/{userName}/userInformationByUserName")
 				.permitAll()
+				.antMatchers(HttpMethod.GET,
+						"http://localhost:8090/api/product/productId/{productId}/obtainProductInformation")
+				.permitAll()
 				.antMatchers(HttpMethod.GET, "/api/product/obtainProductInformation/{productId}",
 						"/api/item/id/{id}/quantity/{quantity}/obtainInformationItemById",
 						"/api/user/userName/{userName}/userInformation")
